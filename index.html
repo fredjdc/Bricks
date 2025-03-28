@@ -1,9 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bricks - Mortgage Decisions Made Simple</title>
+    <meta name="apple-itunes-app" content="app-id=123456789, app-argument=https://bricksapp.com/calculator">
+    <meta name="description" content="Bricks: la calculadora hipotecaria intuitiva para compradores primerizos. Compare tasas, visualice pagos y tome decisiones financieras con confianza. Herramienta profesional para bancos.">
+    <title>Bricks - Decisiones Hipotecarias Simplificadas</title>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Bricks",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "iOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "4.99",
+        "priceCurrency": "USD"
+      },
+      "description": "Calculadora hipotecaria intuitiva para comparar opciones de financiamiento y tomar decisiones informadas."
+    }
+    </script>
+    
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -154,14 +174,41 @@
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="inline-block px-3 py-1 mb-4 text-sm font-medium text-primary-dark bg-primary/10 rounded-full">
+                        <span lang="en">Trusted by 10,000+ users</span>
+                        <span lang="es" class="hidden">Confiado por más de 10.000 usuarios</span>
+                    </div>
                     <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight text-shadow">
                         <span lang="en">Mortgage Decisions <span class="text-primary">Made Simple</span></span>
                         <span lang="es" class="hidden">Decisiones Hipotecarias <span class="text-primary">Simplificadas</span></span>
                     </h1>
-                    <p class="text-xl text-gray-600 mb-8">
-                        <span lang="en">Take the guesswork out of home financing with Bricks, the elegant mortgage calculator that helps you understand your options in seconds.</span>
-                        <span lang="es" class="hidden">Elimina las conjeturas del financiamiento de viviendas con Bricks, la elegante calculadora hipotecaria que te ayuda a entender tus opciones en segundos.</span>
+                    <p class="text-xl text-gray-600 mb-6">
+                        <span lang="en">Struggling with mortgage options? Bricks helps first-time buyers compare rates visually and enables bank professionals to optimize workflows.</span>
+                        <span lang="es" class="hidden">¿Confundido con las opciones hipotecarias? Bricks ayuda a compradores primerizos a comparar tasas visualmente y permite a profesionales bancarios optimizar sus flujos de trabajo.</span>
                     </p>
+                    <ul class="mb-8 space-y-2">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-secondary mt-1 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span lang="en">Compare multiple loan options at once</span>
+                            <span lang="es" class="hidden">Compare múltiples opciones de préstamo a la vez</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-secondary mt-1 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span lang="en">Visualize total cost and monthly payments</span>
+                            <span lang="es" class="hidden">Visualice el costo total y pagos mensuales</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-secondary mt-1 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span lang="en">No financial expertise required</span>
+                            <span lang="es" class="hidden">No se requiere experiencia financiera</span>
+                        </li>
+                    </ul>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#" class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition flex items-center justify-center button-primary">
                             <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
@@ -171,16 +218,35 @@
                             <span lang="es" class="hidden">Descargar en App Store</span>
                         </a>
                         <a href="#" class="border-2 border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary hover:text-white transition text-center hover-lift animate-pulse-shadow">
-                            <span lang="en">7-Day Free Trial</span>
-                            <span lang="es" class="hidden">Prueba Gratuita de 7 Días</span>
+                            <span lang="en">Watch Demo (2 min)</span>
+                            <span lang="es" class="hidden">Ver Demostración (2 min)</span>
+                        </a>
+                        <a href="https://wa.me/51123456789" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition flex items-center justify-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            <span lang="en">Contact via WhatsApp</span>
+                            <span lang="es" class="hidden">Contactar por WhatsApp</span>
                         </a>
                     </div>
                 </div>
                 <div class="md:w-1/2 relative">
                     <div class="hero-image relative overflow rounded-full shadow-2xl transform transition-transform duration-700 hover:scale-105 animate-float z-10">
-                        <img src="Hero%2001.png" alt="Bricks Mortgage Calculator App" class="w-full max-w-xs mx-auto">
+                        <img src="Hero%2001.png" alt="Bricks Mortgage App en español - Calculadora hipotecaria con visualización de pagos y comparación de tasas" class="w-full max-w-xs mx-auto">
                     </div>
-                    <!-- Decorative Elements Removed -->
+                    <div class="absolute -bottom-4 right-0 md:right-10 bg-white p-4 rounded-lg shadow-lg max-w-xs">
+                        <div class="flex items-start">
+                            <div class="bg-green-100 rounded-full p-2 mr-3">
+                                <svg class="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <p class="text-sm text-gray-600">
+                                <span lang="en">"I finally understand what I'm paying for. Bricks made mortgage shopping so much easier!"</span>
+                                <span lang="es" class="hidden">"Por fin entiendo por qué estoy pagando. ¡Bricks hizo que buscar hipotecas fuera mucho más fácil!"</span>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -280,9 +346,74 @@
     <!-- For Home Buyers -->
     <section id="for-buyers" class="py-12 md:py-24">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-primary inline-block border-b-4 border-primary pb-2">
+                    <span lang="en">First-Time Home Buyers</span>
+                    <span lang="es" class="hidden">Compradores de Vivienda por Primera Vez</span>
+                </h2>
+                <p class="text-xl max-w-3xl mx-auto">
+                    <span lang="en">No need to be a finance expert. Bricks explains everything in simple terms.</span>
+                    <span lang="es" class="hidden">No necesitas ser un experto en finanzas. Bricks explica todo en términos simples.</span>
+                </p>
+            </div>
+            
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
-                    <img src="Image01.jpg" alt="Happy couple with house keys" class="rounded-xl shadow-lg animate-on-scroll">
+                    <img src="Image01.jpg" alt="Pareja feliz con llaves de su nueva casa después de utilizar Bricks para comparar hipotecas" class="rounded-xl shadow-lg animate-on-scroll">
+                    
+                    <!-- Mortgage Terms Guide Box -->
+                    <div class="bg-blue-50 p-5 rounded-lg mt-6 border-l-4 border-primary shadow-sm">
+                        <h3 class="font-bold text-lg mb-2">
+                            <span lang="en">Mortgage Terms Simplified</span>
+                            <span lang="es" class="hidden">Términos Hipotecarios Simplificados</span>
+                        </h3>
+                        <p class="text-sm text-gray-700 mb-3">
+                            <span lang="en">New to mortgages? Bricks explains each term with simple definitions:</span>
+                            <span lang="es" class="hidden">¿Nuevo en hipotecas? Bricks explica cada término con definiciones simples:</span>
+                        </p>
+                        <div class="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                            <div>
+                                <span class="font-medium text-primary">
+                                    <span lang="en">Interest Rate</span>
+                                    <span lang="es" class="hidden">Tasa de Interés</span>
+                                </span>
+                                <p class="text-xs text-gray-600">
+                                    <span lang="en">Cost of borrowing money</span>
+                                    <span lang="es" class="hidden">Costo de pedir dinero prestado</span>
+                                </p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-primary">
+                                    <span lang="en">APR</span>
+                                    <span lang="es" class="hidden">APR</span>
+                                </span>
+                                <p class="text-xs text-gray-600">
+                                    <span lang="en">Annual cost including fees</span>
+                                    <span lang="es" class="hidden">Costo anual incluyendo tarifas</span>
+                                </p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-primary">
+                                    <span lang="en">Term</span>
+                                    <span lang="es" class="hidden">Plazo</span>
+                                </span>
+                                <p class="text-xs text-gray-600">
+                                    <span lang="en">Length of your loan</span>
+                                    <span lang="es" class="hidden">Duración de tu préstamo</span>
+                                </p>
+                            </div>
+                            <div>
+                                <span class="font-medium text-primary">
+                                    <span lang="en">Amortization</span>
+                                    <span lang="es" class="hidden">Amortización</span>
+                                </span>
+                                <p class="text-xs text-gray-600">
+                                    <span lang="en">Loan repayment schedule</span>
+                                    <span lang="es" class="hidden">Calendario de reembolso</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="md:w-1/2 animate-on-scroll">
                     <h2 class="text-3xl font-bold mb-6 text-primary">
@@ -290,8 +421,8 @@
                         <span lang="es" class="hidden">Para Compradores de Viviendas</span>
                     </h2>
                     <p class="text-xl mb-6">
-                        <span lang="en">You've found your dream home. Now find your ideal mortgage.</span>
-                        <span lang="es" class="hidden">Has encontrado la casa de tus sueños. Ahora encuentra tu hipoteca ideal.</span>
+                        <span lang="en">Confused by mortgage jargon? Bricks makes it easy to understand your options.</span>
+                        <span lang="es" class="hidden">¿Confundido por la jerga hipotecaria? Bricks facilita la comprensión de tus opciones.</span>
                     </p>
                     
                     <ul class="space-y-3 mb-8">
@@ -345,9 +476,66 @@
     <!-- For Mortgage Professionals -->
     <section id="for-pros" class="py-12 md:py-24 bg-gray-50">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 text-primary inline-block border-b-4 border-primary pb-2">
+                    <span lang="en">Bank & Mortgage Professionals</span>
+                    <span lang="es" class="hidden">Profesionales Bancarios e Hipotecarios</span>
+                </h2>
+                <p class="text-xl max-w-3xl mx-auto">
+                    <span lang="en">Streamline your workflow and enhance client consultations with visual tools.</span>
+                    <span lang="es" class="hidden">Optimiza tu flujo de trabajo y mejora las consultas con clientes usando herramientas visuales.</span>
+                </p>
+            </div>
+            
             <div class="flex flex-col md:flex-row-reverse items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0 md:pl-12">
-                    <img src="Image02.jpg" alt="Professional in office with client" class="rounded-xl shadow-lg animate-on-scroll">
+                    <div class="relative">
+                        <img src="Image02.jpg" alt="Asesor bancario profesional utilizando Bricks para mostrar opciones hipotecarias a cliente de forma visual" class="rounded-xl shadow-lg animate-on-scroll">
+                        <div class="absolute top-4 right-4 bg-white p-2 rounded-lg shadow-md">
+                            <span class="text-xs font-semibold text-primary">
+                                <span lang="en">PRO VERSION</span>
+                                <span lang="es" class="hidden">VERSIÓN PRO</span>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Efficiency Metrics Box -->
+                    <div class="bg-white p-5 rounded-lg mt-6 border border-gray-200 shadow-sm">
+                        <h3 class="font-bold text-lg mb-3 text-gray-800">
+                            <span lang="en">Workflow Improvements</span>
+                            <span lang="es" class="hidden">Mejoras en el Flujo de Trabajo</span>
+                        </h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center p-3 bg-gray-50 rounded">
+                                <span class="block text-2xl font-bold text-primary">40%</span>
+                                <span class="text-sm text-gray-600">
+                                    <span lang="en">Faster client consultations</span>
+                                    <span lang="es" class="hidden">Consultas más rápidas</span>
+                                </span>
+                            </div>
+                            <div class="text-center p-3 bg-gray-50 rounded">
+                                <span class="block text-2xl font-bold text-primary">3.5x</span>
+                                <span class="text-sm text-gray-600">
+                                    <span lang="en">Better client understanding</span>
+                                    <span lang="es" class="hidden">Mejor comprensión</span>
+                                </span>
+                            </div>
+                            <div class="text-center p-3 bg-gray-50 rounded">
+                                <span class="block text-2xl font-bold text-primary">25%</span>
+                                <span class="text-sm text-gray-600">
+                                    <span lang="en">Higher close rate</span>
+                                    <span lang="es" class="hidden">Mayor tasa de cierre</span>
+                                </span>
+                            </div>
+                            <div class="text-center p-3 bg-gray-50 rounded">
+                                <span class="block text-2xl font-bold text-primary">90%</span>
+                                <span class="text-sm text-gray-600">
+                                    <span lang="en">Client satisfaction</span>
+                                    <span lang="es" class="hidden">Satisfacción del cliente</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="md:w-1/2 animate-on-scroll">
                     <h2 class="text-3xl font-bold mb-6 text-primary">
@@ -355,8 +543,8 @@
                         <span lang="es" class="hidden">Para Profesionales Hipotecarios</span>
                     </h2>
                     <p class="text-xl mb-6">
-                        <span lang="en">Close more deals with crystal-clear mortgage illustrations.</span>
-                        <span lang="es" class="hidden">Cierra más tratos con ilustraciones hipotecarias claras como el cristal.</span>
+                        <span lang="en">Accelerate your mortgage workflow and improve client consultations with powerful visual tools.</span>
+                        <span lang="es" class="hidden">Acelera tu flujo de trabajo hipotecario y mejora las consultas con clientes con potentes herramientas visuales.</span>
                     </p>
                     
                     <ul class="space-y-3 mb-8">
@@ -364,43 +552,53 @@
                             <svg class="w-5 h-5 text-secondary mt-1 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                             </svg>
-                            <span lang="en">Quickly show clients multiple financing scenarios</span>
-                            <span lang="es" class="hidden">Muestra rápidamente a los clientes múltiples escenarios de financiación</span>
+                            <span lang="en">Create custom scenarios in seconds instead of minutes</span>
+                            <span lang="es" class="hidden">Crea escenarios personalizados en segundos en lugar de minutos</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-secondary mt-1 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                             </svg>
-                            <span lang="en">Create professional reports to share on the spot</span>
-                            <span lang="es" class="hidden">Crea informes profesionales para compartir al instante</span>
+                            <span lang="en">Generate branded reports with your bank's logo</span>
+                            <span lang="es" class="hidden">Genera informes con la marca y logo de tu banco</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-secondary mt-1 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                             </svg>
-                            <span lang="en">Help clients visualize the impact of different interest rates</span>
-                            <span lang="es" class="hidden">Ayuda a los clientes a visualizar el impacto de diferentes tasas de interés</span>
+                            <span lang="en">Share scenarios directly with clients via secure link</span>
+                            <span lang="es" class="hidden">Comparte escenarios directamente con clientes vía enlace seguro</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-secondary mt-1 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                             </svg>
-                            <span lang="en">Demonstrate your expertise with detailed amortization schedules</span>
-                            <span lang="es" class="hidden">Demuestra tu experiencia con calendarios de amortización detallados</span>
+                            <span lang="en">Import rates and terms automatically from your systems</span>
+                            <span lang="es" class="hidden">Importa tasas y términos automáticamente desde tus sistemas</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="w-5 h-5 text-secondary mt-1 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                             </svg>
-                            <span lang="en">Support clients in making informed decisions</span>
-                            <span lang="es" class="hidden">Apoya a los clientes para que tomen decisiones informadas</span>
+                            <span lang="en">Track client interactions and follow-ups in one place</span>
+                            <span lang="es" class="hidden">Haz seguimiento de interacciones con clientes en un solo lugar</span>
                         </li>
                     </ul>
                     
                     <div class="bg-white p-6 rounded-lg border border-gray-200 italic text-gray-600">
-                        <span lang="en">"I can create custom mortgage scenarios for my clients in minutes. My close rate has improved since I started using Bricks to explain options visually."</span>
-                        <span lang="es" class="hidden">"Puedo crear escenarios hipotecarios personalizados para mis clientes en minutos. Mi tasa de cierre ha mejorado desde que comencé a usar Bricks para explicar las opciones visualmente."</span>
-                        <div class="mt-2 font-medium text-gray-800">- James, Mortgage Advisor</div>
+                        <span lang="en">"Bricks has revolutionized our mortgage department. We've cut consultation time by 40% and increased our conversion rate. Clients love the visual approach to understanding complex mortgage options."</span>
+                        <span lang="es" class="hidden">"Bricks ha revolucionado nuestro departamento hipotecario. Hemos reducido el tiempo de consulta en un 40% y aumentado nuestra tasa de conversión. Los clientes adoran el enfoque visual para entender opciones hipotecarias complejas."</span>
+                        <div class="mt-2 font-medium text-gray-800">- Carlos M., Senior Mortgage Advisor, Banco Nacional</div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+                            <span lang="en">Request enterprise demo</span>
+                            <span lang="es" class="hidden">Solicitar demostración empresarial</span>
+                            <svg class="ml-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -612,78 +810,83 @@
             
             <!-- App Screenshot Carousel -->
             <div class="relative overflow-hidden py-12">
-                <div class="carousel-container overflow-hidden">
-                    <div id="screenshot-carousel" class="flex animate-carousel">
+                <div class="carousel-container">
+                    <div id="screenshot-carousel" class="flex snap-x scrollbar-hide">
                         <!-- Screenshot 1 -->
-                        <div class="carousel-item flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
+                        <div class="carousel-item snap-center flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
                             <div class="rounded-2xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 duration-300 hover-container">
-                                <img src="Image07.jpeg" alt="App Screenshot 1" class="w-full">
+                                <img src="Image07.jpeg" alt="Bricks App - Pantalla de comparación de hipotecas" class="w-full">
                             </div>
                         </div>
                         
                         <!-- Screenshot 2 -->
-                        <div class="carousel-item flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
+                        <div class="carousel-item snap-center flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
                             <div class="rounded-2xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 duration-300 hover-container">
-                                <img src="Image04.jpeg" alt="App Screenshot 2" class="w-full">
+                                <img src="Image04.jpeg" alt="Bricks App - Vista detallada de amortización hipotecaria" class="w-full">
                             </div>
                         </div>
                         
                         <!-- Screenshot 3 -->
-                        <div class="carousel-item flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
+                        <div class="carousel-item snap-center flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
                             <div class="rounded-2xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 duration-300 hover-container">
-                                <img src="Image05.jpeg" alt="App Screenshot 3" class="w-full">
+                                <img src="Image05.jpeg" alt="Bricks App - Gráficos visuales de pago hipotecario" class="w-full">
                             </div>
                         </div>
                         
                         <!-- Screenshot 4 -->
-                        <div class="carousel-item flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
+                        <div class="carousel-item snap-center flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
                             <div class="rounded-2xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 duration-300 hover-container">
                                 <img src="Image06.jpeg" alt="App Screenshot 4" class="w-full">
                             </div>
                         </div>
                         
-                        <!-- Screenshot 5 (NEW) -->
-                        <div class="carousel-item flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
+                        <!-- Screenshot 5 -->
+                        <div class="carousel-item snap-center flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
                             <div class="rounded-2xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 duration-300 hover-container">
                                 <img src="Image03.jpeg" alt="App Screenshot 5" class="w-full">
                             </div>
                         </div>
                         
-                        <!-- Duplicate Screenshots for infinite effect -->
-                        <!-- Screenshot 1 (duplicate) -->
-                        <div class="carousel-item flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
+                        <!-- Additional screenshots for continuous scrolling -->
+                        <div class="carousel-item snap-center flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
                             <div class="rounded-2xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 duration-300 hover-container">
-                                <img src="Image07.jpeg" alt="App Screenshot 1" class="w-full">
+                                <img src="Image07.jpeg" alt="Bricks App - Pantalla de comparación de hipotecas" class="w-full">
                             </div>
                         </div>
                         
-                        <!-- Screenshot 2 (duplicate) -->
-                        <div class="carousel-item flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
+                        <div class="carousel-item snap-center flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
                             <div class="rounded-2xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 duration-300 hover-container">
-                                <img src="Image04.jpeg" alt="App Screenshot 2" class="w-full">
+                                <img src="Image04.jpeg" alt="Bricks App - Vista detallada de amortización hipotecaria" class="w-full">
                             </div>
                         </div>
                         
-                        <!-- Screenshot 3 (duplicate) -->
-                        <div class="carousel-item flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
+                        <div class="carousel-item snap-center flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
                             <div class="rounded-2xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 duration-300 hover-container">
-                                <img src="Image05.jpeg" alt="App Screenshot 3" class="w-full">
+                                <img src="Image05.jpeg" alt="Bricks App - Gráficos visuales de pago hipotecario" class="w-full">
                             </div>
                         </div>
                         
-                        <!-- Screenshot 4 (duplicate) -->
-                        <div class="carousel-item flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
+                        <div class="carousel-item snap-center flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
                             <div class="rounded-2xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 duration-300 hover-container">
                                 <img src="Image06.jpeg" alt="App Screenshot 4" class="w-full">
                             </div>
                         </div>
                         
-                        <!-- Screenshot 5 (duplicate, NEW) -->
-                        <div class="carousel-item flex-shrink-0 w-64 sm:w-80 px-3 md:px-4 py-4">
+                        <div class="carousel-item snap-center flex-shrink-0 w-64 sm:w-80 px-3 md:px-5 py-4">
                             <div class="rounded-2xl overflow-hidden shadow-lg transform transition-transform hover:scale-105 duration-300 hover-container">
                                 <img src="Image03.jpeg" alt="App Screenshot 5" class="w-full">
                             </div>
                         </div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center mt-8">
+                    <div class="text-center bg-white py-2 px-4 rounded-full shadow-md inline-flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span lang="en" class="text-sm font-medium">Drag to explore more screenshots</span>
+                        <span lang="es" class="hidden text-sm font-medium">Arrastra para explorar más capturas</span>
                     </div>
                 </div>
             </div>
@@ -692,24 +895,32 @@
                 .carousel-container {
                     width: 100%;
                     position: relative;
+                    overflow-x: auto;
+                    scroll-behavior: smooth;
+                    cursor: grab;
+                    -webkit-overflow-scrolling: touch;
+                    scrollbar-width: none; /* Firefox */
+                    -ms-overflow-style: none; /* IE and Edge */
                 }
                 
-                @keyframes carousel-scroll {
-                    0% {
-                        transform: translateX(0);
-                    }
-                    100% {
-                        transform: translateX(-100%);
-                    }
+                .carousel-container::-webkit-scrollbar {
+                    display: none; /* Chrome, Safari and Opera */
                 }
                 
-                .animate-carousel {
-                    animation: carousel-scroll 40s linear infinite;
+                .carousel-container:active {
+                    cursor: grabbing;
                 }
                 
-                /* Pause animation on hover */
-                .carousel-container:hover .animate-carousel {
-                    animation-play-state: paused;
+                .carousel-container.active {
+                    scroll-snap-type: none;
+                }
+                
+                .snap-x {
+                    scroll-snap-type: x mandatory;
+                }
+                
+                .snap-center {
+                    scroll-snap-align: center;
                 }
                 
                 /* Fix for hover scaling */
@@ -722,6 +933,78 @@
                     transform: translateZ(0);
                 }
             </style>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const carousel = document.getElementById('screenshot-carousel');
+                    const container = carousel.parentElement;
+                    
+                    let isDown = false;
+                    let startX;
+                    let scrollLeft;
+                    
+                    // Mouse events
+                    container.addEventListener('mousedown', (e) => {
+                        isDown = true;
+                        container.classList.add('active');
+                        startX = e.pageX - container.offsetLeft;
+                        scrollLeft = container.scrollLeft;
+                        e.preventDefault(); // Prevent text selection
+                    });
+                    
+                    container.addEventListener('mouseleave', () => {
+                        isDown = false;
+                        container.classList.remove('active');
+                    });
+                    
+                    container.addEventListener('mouseup', () => {
+                        isDown = false;
+                        container.classList.remove('active');
+                    });
+                    
+                    container.addEventListener('mousemove', (e) => {
+                        if(!isDown) return;
+                        e.preventDefault();
+                        const x = e.pageX - container.offsetLeft;
+                        const walk = (x - startX) * 1.5; // Adjust scroll speed
+                        container.scrollLeft = scrollLeft - walk;
+                    });
+                    
+                    // Touch events
+                    container.addEventListener('touchstart', (e) => {
+                        isDown = true;
+                        container.classList.add('active');
+                        startX = e.touches[0].pageX - container.offsetLeft;
+                        scrollLeft = container.scrollLeft;
+                    }, { passive: false });
+                    
+                    container.addEventListener('touchend', () => {
+                        isDown = false;
+                        container.classList.remove('active');
+                    });
+                    
+                    container.addEventListener('touchcancel', () => {
+                        isDown = false;
+                        container.classList.remove('active');
+                    });
+                    
+                    container.addEventListener('touchmove', (e) => {
+                        if(!isDown) return;
+                        const x = e.touches[0].pageX - container.offsetLeft;
+                        const walk = (x - startX) * 1.5;
+                        container.scrollLeft = scrollLeft - walk;
+                        e.preventDefault(); // Prevent page scrolling when dragging
+                    }, { passive: false });
+                    
+                    // Scroll to center initially
+                    window.addEventListener('load', () => {
+                        const containerWidth = container.offsetWidth;
+                        const carouselWidth = carousel.scrollWidth;
+                        const initialScroll = (carouselWidth - containerWidth) / 4;
+                        container.scrollLeft = initialScroll;
+                    });
+                });
+            </script>
         </div>
     </section>
 
@@ -955,6 +1238,44 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Language Selector -->
+                <div class="fixed bottom-6 right-6 z-40">
+                    <div class="bg-white rounded-full shadow-lg p-2 flex items-center space-x-2">
+                        <button onclick="changeLanguage('en')" class="w-10 h-10 flex items-center justify-center rounded-full transition-colors duration-200 language-btn hover:bg-gray-100" data-lang="en">
+                            <span class="text-sm font-medium">EN</span>
+                        </button>
+                        <button onclick="changeLanguage('es')" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white transition-colors duration-200 language-btn hover:bg-primary-dark" data-lang="es">
+                            <span class="text-sm font-medium">ES</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 7 (New) -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden" x-data="{ open: false }">
+                    <button 
+                        @click="open = !open" 
+                        class="flex justify-between items-center w-full px-6 py-4 text-left"
+                        aria-expanded="false"
+                        :aria-expanded="open.toString()"
+                    >
+                        <span class="text-xl font-medium text-gray-900">
+                            <span lang="en">Is Bricks available in languages other than English?</span>
+                            <span lang="es" class="hidden">¿Está Bricks disponible en otros idiomas además del inglés?</span>
+                        </span>
+                        <svg class="w-5 h-5 transform transition-transform" :class="{'rotate-180': open}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div x-show="open" x-collapse>
+                        <div class="px-6 pb-4">
+                            <p class="text-gray-600">
+                                <span lang="en">Yes! Bricks is fully localized in Spanish and English, with all calculations, reports, and interface elements translated. We're working on adding more languages based on user demand.</span>
+                                <span lang="es" class="hidden">¡Sí! Bricks está completamente localizado en español e inglés, con todos los cálculos, informes y elementos de interfaz traducidos. Estamos trabajando para agregar más idiomas según la demanda de los usuarios.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -970,13 +1291,23 @@
                 <span lang="en">Start your 7-day free trial today and see why home buyers and professionals trust Bricks for clear, beautiful mortgage calculations.</span>
                 <span lang="es" class="hidden">Comienza tu prueba gratuita de 7 días hoy y descubre por qué los compradores de viviendas y profesionales confían en Bricks para cálculos hipotecarios claros y hermosos.</span>
             </p>
-            <a href="#" class="inline-flex items-center px-8 py-4 bg-black rounded-lg hover:bg-gray-800 transition-colors button-primary animate-pulse-shadow">
-                <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.5646,12.6636 C17.532,10.0547 19.2843,8.5727 19.3623,8.5143 C18.1994,6.8761 16.3166,6.6936 15.6761,6.6747 C14.0535,6.5243 12.4844,7.716 11.6574,7.716 C10.8185,7.716 9.5219,6.6935 8.1644,6.7243 C6.4269,6.7551 4.8012,7.716 3.9234,9.2457 C2.1152,12.3603 3.4646,17.0072 5.2,19.5467 C6.0705,20.797 7.0775,22.2118 8.3948,22.1615 C9.6834,22.1112 10.16,21.3003 11.7071,21.3003 C13.2432,21.3003 13.6911,22.1615 15.0274,22.1327 C16.4046,22.1112 17.2788,20.8642 18.1256,19.6026 C19.1199,18.1483 19.5678,16.7144 19.5869,16.6545 C19.5583,16.6449 17.601,15.8649 17.5646,12.6636 Z M15.0599,5.0066 C15.7748,4.1194 16.2611,2.9026 16.1067,1.6666 C15.063,1.7078 13.7649,2.3665 13.0214,3.2346 C12.3638,4.0024 11.7741,5.2577 11.9475,6.4745 C13.1104,6.5537 14.3259,5.8843 15.0599,5.0066 Z"></path>
-                </svg>
-                <span lang="en">Download on the App Store</span>
-                <span lang="es" class="hidden">Descargar en la App Store</span>
-            </a>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#" class="inline-flex items-center px-8 py-4 bg-black rounded-lg hover:bg-gray-800 transition-colors button-primary animate-pulse-shadow">
+                    <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.5646,12.6636 C17.532,10.0547 19.2843,8.5727 19.3623,8.5143 C18.1994,6.8761 16.3166,6.6936 15.6761,6.6747 C14.0535,6.5243 12.4844,7.716 11.6574,7.716 C10.8185,7.716 9.5219,6.6935 8.1644,6.7243 C6.4269,6.7551 4.8012,7.716 3.9234,9.2457 C2.1152,12.3603 3.4646,17.0072 5.2,19.5467 C6.0705,20.797 7.0775,22.2118 8.3948,22.1615 C9.6834,22.1112 10.16,21.3003 11.7071,21.3003 C13.2432,21.3003 13.6911,22.1615 15.0274,22.1327 C16.4046,22.1112 17.2788,20.8642 18.1256,19.6026 C19.1199,18.1483 19.5678,16.7144 19.5869,16.6545 C19.5583,16.6449 17.601,15.8649 17.5646,12.6636 Z M15.0599,5.0066 C15.7748,4.1194 16.2611,2.9026 16.1067,1.6666 C15.063,1.7078 13.7649,2.3665 13.0214,3.2346 C12.3638,4.0024 11.7741,5.2577 11.9475,6.4745 C13.1104,6.5537 14.3259,5.8843 15.0599,5.0066 Z"></path>
+                    </svg>
+                    <span lang="en">Download on the App Store</span>
+                    <span lang="es" class="hidden">Descargar en la App Store</span>
+                </a>
+                
+                <a href="https://wa.me/51123456789?text=Hola%2C%20me%20interesa%20Bricks" target="_blank" class="inline-flex items-center px-8 py-4 bg-green-600 rounded-lg hover:bg-green-700 transition-colors">
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span lang="en">Contact via WhatsApp</span>
+                    <span lang="es" class="hidden">Contactar por WhatsApp</span>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -1028,6 +1359,13 @@
                                 <span lang="en">Contact Us</span>
                                 <span lang="es" class="hidden">Contáctanos</span>
                             </a></li>
+                            <li><a href="https://wa.me/51123456789" target="_blank" class="hover:text-white transition-colors flex items-center">
+                                <svg class="w-4 h-4 mr-2 text-green-400" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                                </svg>
+                                <span lang="en">WhatsApp</span>
+                                <span lang="es" class="hidden">WhatsApp</span>
+                            </a></li>
                             <li><a href="#" class="hover:text-white transition-colors">
                                 <span lang="en">Privacy</span>
                                 <span lang="es" class="hidden">Privacidad</span>
@@ -1037,31 +1375,6 @@
                                 <span lang="es" class="hidden">Términos</span>
                             </a></li>
                         </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-lg font-semibold mb-4">
-                            <span lang="en">Follow Us</span>
-                            <span lang="es" class="hidden">Síguenos</span>
-                        </h3>
-                        <div class="flex space-x-4">
-                            <!-- Social Icons -->
-                            <a href="#" class="hover:text-white transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
-                                </svg>
-                            </a>
-                            <a href="#" class="hover:text-white transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path>
-                                </svg>
-                            </a>
-                            <a href="#" class="hover:text-white transition-colors">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
-                                </svg>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1133,7 +1446,7 @@
     <!-- Language Switching Script -->
     <script>
         // Default language
-        let currentLanguage = 'en';
+        let currentLanguage = 'es';
 
         // Function to change the language
         function changeLanguage(lang) {
@@ -1182,9 +1495,65 @@
         document.addEventListener('DOMContentLoaded', () => {
             // Set initial language
             changeLanguage(currentLanguage);
+            
+            // Add analytics event tracking for language changes
+            const langButtons = document.querySelectorAll('.language-btn');
+            langButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'language_change', {
+                            'language': this.dataset.lang
+                        });
+                    }
+                });
+            });
+            
+            // Implement scroll tracking for key sections
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && entry.target.id) {
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'section_view', {
+                                'section_id': entry.target.id
+                            });
+                        }
+                    }
+                });
+            }, {threshold: 0.5});
+            
+            // Track key sections
+            document.querySelectorAll('section[id]').forEach(section => {
+                observer.observe(section);
+            });
         });
     </script>
 
     <!-- JavaScript auto-scrolling carousel script removed to prevent page jumping -->
+
+    <!-- Language Selector -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <div class="bg-white rounded-full shadow-lg p-2 flex items-center space-x-2">
+            <button onclick="changeLanguage('en')" class="w-10 h-10 flex items-center justify-center rounded-full transition-colors duration-200 language-btn hover:bg-gray-100" data-lang="en">
+                <span class="text-sm font-medium">EN</span>
+            </button>
+            <button onclick="changeLanguage('es')" class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white transition-colors duration-200 language-btn hover:bg-primary-dark" data-lang="es">
+                <span class="text-sm font-medium">ES</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 left-6 z-40">
+        <a href="https://wa.me/51123456789?text=Hola%2C%20me%20gustaría%20obtener%20más%20información%20sobre%20Bricks" target="_blank" class="flex items-center justify-center w-14 h-14 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-200 group">
+            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span class="absolute top-0 right-0 -mt-2 -mr-2 bg-red-500 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">1</span>
+            <div class="absolute left-16 bg-white px-4 py-2 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap">
+                <span lang="en">Chat with us</span>
+                <span lang="es" class="hidden">Chatea con nosotros</span>
+            </div>
+        </a>
+    </div>
 </body>
 </html> 
